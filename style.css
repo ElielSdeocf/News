@@ -40,6 +40,7 @@ header button{
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 }
 header nav.mobile{
     position: fixed;
@@ -67,6 +68,9 @@ header .mobile a{
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
+}
+header .desktop {
+    display: none;
 }
 main{
     max-width: 1110px;
@@ -158,7 +162,28 @@ main{
     line-height: 1.625rem;
     color: var(--gun-metal);
 }
+.third-section a{
+    text-decoration: none;
+}
 @media(min-width:1099px){
+ 
+    header > button{
+        display:none ;
+    }
+    header .desktop{
+        display: flex;
+        gap: 2.5rem;
+    }
+    header .desktop a{
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gun-metal);
+
+    }
+    header .desktop a:hover{
+        color: var(--vermilion);
+    }
     main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -180,27 +205,19 @@ main{
     .first-section h1{
         font-size: 2.5rem;
     }
+    .first-section button:hover{
+        background-color: var(--dark-blue);
+        cursor: pointer;
+    }
     .second-section h2{
         font-size: 2.5rem;
 
     }
-    header > button{
-        display:none ;
-    }
-    header .desktop{
+    .third-section{
         display: flex;
-        gap: 2.5rem;
+        grid-column: 1/4;
     }
-    header .desktop a{
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
-        text-decoration: none;
-        color: var(--gun-metal);
-
-    }
-}
-@media(max-width:1098px){
-    header > nav.desktop{
-        display: none;
+    .third-section h2:hover{
+        color: var(--vermilion);
     }
 }
